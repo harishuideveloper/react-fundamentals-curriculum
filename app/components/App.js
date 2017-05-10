@@ -1,10 +1,13 @@
 var React = require('react');
+var NavBar = require('./NavBar');
+var Forecast = require('./Forecast');
 
 class App extends React.Component{
     render() {
         return(
             <div className='container'> 
-                <p>Hello World</p>
+                <NavBar />
+                <Forecast />
             </div>
         )
     }
