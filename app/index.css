@@ -32,6 +32,10 @@ li {
   flex-direction: column;
 }
 
+.navbar .zipcode-container {
+  flex-direction: row;
+}
+
 .forecast-container {
   height: 100%;
   width: 100%;
@@ -43,6 +47,7 @@ li {
   background: rgba(252,90,44,.89);
   color: #fff;
   padding: 5px;
+  justify-content: space-between;
 }
 
 .btn {
