@@ -110,17 +110,17 @@ li {
     flex-wrap: wrap;
 }
 
-.forecast-header .dayContainer {
+.dayContainer {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   margin: 35px;
 }
-.forecast-header .dayContainer img{
+.dayContainer img{
   height: 130px;
 }
-.forecast-header .dayContainer .subheader{
+.dayContainer .subheader{
   font-size: 30px;
     color: #333;
     font-weight: 100;

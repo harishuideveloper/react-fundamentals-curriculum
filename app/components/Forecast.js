@@ -1,24 +1,11 @@
 var React = require('react');
 var NavBar = require('./NavBar');
+var DayContainer = require('./DayContainer');
 var { getCurrentWeather, getCurrentFiveDaysWeather } = require('../utils/api');
 var queryString = require('query-string');
 var utils = require('../utils/helpers');
 var getDate = utils.getDate;
 var convertTemp = utils.convertTemp;
-
-const DayContainer = (props) => {
-    return(
-        <div onClick={props.onClick} className='dayContainer'>
-            <img 
-                src={'/app/images/weather-icons/' + props.list.weather[0].icon + '.svg'}
-                alt='Weather'
-            />
-            <h2 className='subheader'>
-      
-            </h2>
-        </div>
-    )
-}
 
 const WeatherIcon = (props) => {
     return(
@@ -27,7 +14,7 @@ const WeatherIcon = (props) => {
             <div className='forecast-container'>
             {
                 props.forecast.map((list, index) => {
-                    return(<DayContainer onClick = {props.onClick} key={index} list={list} />)
+                    return(<DayContainer onClick = {props.onClick} key={index} list={list} icon={list.weather[0].icon}/>)
                 })
             }
             </div>
@@ -92,7 +79,6 @@ class Forecast extends React.Component{
         if(loading === true) {
             return <p>Loading</p>
         }
-
         return(
             <div className='container'>
                 <NavBar />
